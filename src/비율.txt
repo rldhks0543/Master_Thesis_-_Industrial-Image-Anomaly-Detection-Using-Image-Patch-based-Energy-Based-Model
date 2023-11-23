@@ -1,0 +1,55 @@
+bottle : 900 * 900
+cable : 1023 * 1024
+capsule : 1000 * 1000
+carpet : 1024 * 1024
+grid : 1024 * 1024
+hazelnut : 1024 * 1024
+leather : 1024 * 1024
+metalnut : 700 * 700
+pill : 800 * 800
+screw : 1024 * 1024
+tile : 840 * 840
+toothbruch : 1024 * 1024
+transistor : 1024 * 1024
+wood : 1024 * 1024
+zipper : 1024 * 1024
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+현재
+crop size : 256
+비율 : 6.55%
+
+crop size : 512
+비율 : 26.21%
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+현재
+test_img_size : 256
+slice_num : 4
+비율 : 6.25%
+
+test_img_size : 512
+slice_num : 4
+비율 : 6.25%
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+def calc_ratio1(img_size, crop_size):
+    ratio = (crop_size**2/img_size**2) * 100
+    return print(f'({img_size}/{crop_size})ratio : {round(ratio,4)}')
+
+def calc_ratio2(img_size, a, mode):
+    if mode == 'slice_num':
+        ratio = ((img_size**2/a**2)/img_size**2)*100
+        return print(f'({img_size}/{a})ratio : {round(ratio,4)}')
+    else:
+        ratio = img_size/(img_size**2*(a/100))**0.5
+        return print(f'({img_size}/{a}) : {round(ratio,4)}')
+
+# img가 1000, crop size가 256일 때 몇 퍼센트
+calc_ratio1(1000, 256)
+
+# img가 256일 때, 4*4 등분하면 몇 퍼센트
+calc_ratio2(256, 4, 'slice_num')
+
+# img가 1000일 때, 6.25% 얻으러면 몇 슬라이스
+calc_ratio2(1000, 6.25, 'ratio') 
