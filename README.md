@@ -27,3 +27,4 @@
 ![image](https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/17f4085c-0791-4a88-aa96-1a27a53234dd)
 ***
 ## 실험 결과
+본 모델을 적용한 데이터 셋은 제조 산업 이미지 데이터인 [MVTec AD][https://www.mvtec.com/company/research/datasets/mvtec-ad] 데이터셋이다.
