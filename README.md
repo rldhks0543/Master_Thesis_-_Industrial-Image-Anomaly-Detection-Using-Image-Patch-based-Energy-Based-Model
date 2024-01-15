@@ -28,6 +28,7 @@
 최종적인 이상 점수를 도출하기 위하여, 패치 수준(patch-level)에서 학습한 EBM과 이미지 전체 수준(image-level)으로 학습하는 EBM에서 도출된 이상 점수를 앙상블하여 최종점수로 선정하였다.  
   
 <img width="650" alt="Ensemble process" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/cedd5aa3-e841-43a1-b014-f4f16526e41f">
+  
 ***
 ## 실험 결과
 본 모델을 적용한 데이터 셋은 제조 산업 이미지 데이터인 [MVTec AD](https://www.mvtec.com/company/research/datasets/mvtec-ad) 데이터셋이다.
