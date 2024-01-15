@@ -33,7 +33,7 @@
 ## 실험 결과
 본 모델을 적용한 데이터 셋은 제조 산업 이미지 데이터인 [MVTec AD](https://www.mvtec.com/company/research/datasets/mvtec-ad) 데이터셋이다.
 
-본 논문에서 제안하는 앙상블 된 최종 모델과 비교군 모델들의 성능을 비교하기 위해 표3을 제시한다. 비교군은 EBM과 같이 재구성(reconstruct) 방식의 이상 감지 모델으로 설정하였다. [Baseline EBM[7]](https://arxiv.org/pdf/2105.03270.pdf)의 경우 이미지 기반 에너지 모델(Image-level EBM)과 같이 이미지 전체를 학습하는 방식은 같으나, 본 논문에서 제안하는 모델과 달리 8개 층의 기본적인 CNN 활용, PYLD-M-N 샘플링 알고리즘이 아닌 SGLD 샘플링 알고리즘 적용, Batch norm 미적용, 샘플링 과정에서 생성되는 잡음(noise) 벡터 생성 방식에 있어서 차이가 난다. 이에 따라 Baseline EBM이 매우 기본적인 형태임에 성능이 낮을 수 있으나, 발전된 알고리즘들이 적용된 본 논문의 EBM과 비교하기 위하여 비교군에 추가하였다. 
+본 논문에서 제안하는 앙상블 된 최종 모델과 비교군 모델들의 성능을 비교하기 위해 표3을 제시한다. 비교군은 EBM과 같이 재구성(reconstruct) 방식의 이상 감지 모델으로 설정하였다. [Baseline EBM[7]](https://arxiv.org/pdf/2105.03270.pdf)의 경우 이미지 기반 에너지 모델(Image-level EBM)과 같이 이미지 전체를 학습하는 방식은 같으나, 본 논문에서 제안하는 모델과 달리 8개 층의 기본적인 CNN 활용, PYLD-M-N 샘플링 알고리즘이 아닌 SGLD 샘플링 알고리즘 적용, Batch norm 미적용, 샘플링 과정에서 생성되는 잡음(noise) 벡터 생성 방식에 있어서 차이가 난다. 이에 따라 Baseline EBM이 매우 기본적인 형태임에 성능이 낮을 수 있으나, 발전된 알고리즘들이 적용된 본 논문의 EBM과 비교하기 위하여 비교군에 추가하였다.  
 우선 성능 비교표(표3)에서 Object 카테고리는 bottle, Hazelnut, Toothbrush를 제외하고 비교군에 비해 최고 성능을 보였으며, 특히 Texture 카테고리의 경우는 평균 점수가 0.958점으로 최고 성능을 보였다. 전체 카테고리 평균 성능 또한 비교군에 비해 최고 성능을 보였으며, Baseline EBM에 비해 18.3%p 차이를 보이며 성능이 크게 차이남을 알 수 있었다.  
   
 <img width="559" alt="성능표" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/4756cb08-f7fa-4681-8239-7f09beea60f7">
