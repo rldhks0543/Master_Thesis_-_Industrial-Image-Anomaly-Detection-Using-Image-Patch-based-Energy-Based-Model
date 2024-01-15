@@ -11,7 +11,7 @@
 
 #### 1-1. 학습 구조(Training Process)  
 이미지 패치 기반 에너지 모델의 학습 구조는 그림1과 같다. 각 반복(iteration)에 정상 이미지에서 이미지 가운데를 기준으로 가우시안 분포로 랜덤한 패치를 떼어낸다. 이후 이미지 패치와 PYLD-M-N 알고리즘으로 생성된 이미지를 에너지 신경망(Energy CNN)에 넣은 뒤, 각각의 에너지 점수를 뽑아내게 된다. 이 두 에너지 점수를 손실 함수에 넣어 에너지 신경망을 업데이트하게 된다.
-![image](https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/a16ce0cd-dbff-4908-9320-a16c4c33151e){: width="80%" height="80%"}
+![image](https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/a16ce0cd-dbff-4908-9320-a16c4c33151e)
 
 #### 1-2. 평가 구조(Testing Process)<br/>
 실험 이미지(test image) 한 장인 가 존재할 때, n*n의 격자로 이미지를 자른다. 모든 grid에 대하여 에너지 함수를 적용한 뒤, 도출된 에너지 점수들 중 가장 큰 값을 의 최종 이상 점수로 지정한다.
