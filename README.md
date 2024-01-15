@@ -11,11 +11,11 @@
 
 #### 1-1. 학습 구조(Training Process)  
 이미지 패치 기반 에너지 모델의 학습 구조는 그림1과 같다. 각 반복(iteration)에 정상 이미지에서 이미지 가운데를 기준으로 가우시안 분포로 랜덤한 패치를 떼어낸다. 이후 이미지 패치와 PYLD-M-N 알고리즘으로 생성된 이미지를 에너지 신경망(Energy CNN)에 넣은 뒤, 각각의 에너지 점수를 뽑아내게 된다. 이 두 에너지 점수를 손실 함수에 넣어 에너지 신경망을 업데이트하게 된다.
-![image](https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/a16ce0cd-dbff-4908-9320-a16c4c33151e)
+<img width="736" alt="training process" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/63009be0-cfec-4c53-af53-20823f710391">
 
 #### 1-2. 평가 구조(Testing Process)<br/>
 실험 이미지(test image) 한 장인 가 존재할 때, n*n의 격자로 이미지를 자른다. 모든 grid에 대하여 에너지 함수를 적용한 뒤, 도출된 에너지 점수들 중 가장 큰 값을 의 최종 이상 점수로 지정한다.
-![image](https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/c6c2fede-f8d7-41b4-ae7a-372ecf737fd9)
+<img width="689" alt="Testing process" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/8a4b2b04-eaf7-4a67-a844-0f202f98a671">
 
 ### 2. 이미지 기반 에너지 모델(Image-level EBM)
 
@@ -24,7 +24,7 @@
 ### 3. 앙상블한 모델
 
 최종적인 이상 점수를 도출하기 위하여, 패치 수준(patch-level)에서 학습한 EBM과 이미지 전체 수준(image-level)으로 학습하는 EBM에서 도출된 이상 점수를 앙상블하여 최종점수로 선정하였다.
-![image](https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/17f4085c-0791-4a88-aa96-1a27a53234dd)
+<img width="806" alt="Ensemble process" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/cedd5aa3-e841-43a1-b014-f4f16526e41f">
 ***
 ## 실험 결과
 본 모델을 적용한 데이터 셋은 제조 산업 이미지 데이터인 [MVTec AD](https://www.mvtec.com/company/research/datasets/mvtec-ad) 데이터셋이다.
