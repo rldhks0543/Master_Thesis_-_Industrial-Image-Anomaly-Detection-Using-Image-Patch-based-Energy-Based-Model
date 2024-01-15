@@ -6,3 +6,4 @@
 
 ## 이미지 패치 기반 에너지 모델의 구조
 
+![image](https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/f852d837-3d22-4acc-973b-566505e45555)
