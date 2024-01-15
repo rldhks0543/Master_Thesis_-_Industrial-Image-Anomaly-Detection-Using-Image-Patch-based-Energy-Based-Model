@@ -33,6 +33,26 @@
 ## 실험 결과
 본 모델을 적용한 데이터 셋은 제조 산업 이미지 데이터인 [MVTec AD](https://www.mvtec.com/company/research/datasets/mvtec-ad) 데이터셋이다.
 
-본 논문에서 제안하는 앙상블 된 최종 모델과 비교군 모델들의 성능을 비교하기 위해 표3을 제시한다. 비교군은 EBM과 같이 재구성(reconstruct) 방식의 이상 감지 모델으로 설정하였다. [Baseline EBM[7]](https://arxiv.org/pdf/2105.03270.pdf)의 경우 이미지 기반 에너지 모델(Image-level EBM)과 같이 이미지 전체를 학습하는 방식은 같으나, 본 논문에서 제안하는 모델과 달리 8개 층의 기본적인 CNN 활용, PYLD-M-N 샘플링 알고리즘이 아닌 SGLD 샘플링 알고리즘 적용, Batch norm 미적용, 샘플링 과정에서 생성되는 잡음(noise) 벡터 생성 방식에 있어서 차이가 난다. 이에 따라 Baseline EBM이 매우 기본적인 형태임에 성능이 낮을 수 있으나, 발전된 알고리즘들이 적용된 본 논문의 EBM과 비교하기 위하여 비교군에 추가하였다.  
+본 논문에서 제안하는 앙상블 된 최종 모델과 비교군 모델들의 성능을 비교하기 위해 표3을 제시한다. 비교군은 EBM과 같이 재구성(reconstruct) 방식의 이상 감지 모델으로 설정하였다. [Baseline EBM[7]](https://arxiv.org/pdf/2105.03270.pdf)의 경우 이미지 기반 에너지 모델(Image-level EBM)과 같이 이미지 전체를 학습하는 방식은 같으나, 본 논문에서 제안하는 모델과 달리 8개 층의 기본적인 CNN 활용, PYLD-M-N 샘플링 알고리즘이 아닌 SGLD 샘플링 알고리즘 적용, Batch norm 미적용, 샘플링 과정에서 생성되는 잡음(noise) 벡터 생성 방식에 있어서 차이가 난다. 이에 따라 Baseline EBM이 매우 기본적인 형태임에 성능이 낮을 수 있으나, 발전된 알고리즘들이 적용된 본 논문의 EBM과 비교하기 위하여 비교군에 추가하였다. 
+우선 성능 비교표(표3)에서 Object 카테고리는 bottle, Hazelnut, Toothbrush를 제외하고 비교군에 비해 최고 성능을 보였으며, 특히 Texture 카테고리의 경우는 평균 점수가 0.958점으로 최고 성능을 보였다. 전체 카테고리 평균 성능 또한 비교군에 비해 최고 성능을 보였으며, Baseline EBM에 비해 18.3%p 차이를 보이며 성능이 크게 차이남을 알 수 있었다.  
   
 <img width="559" alt="성능표" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/4756cb08-f7fa-4681-8239-7f09beea60f7">
+  
+***
+## Appendix
+
+A. 모델 세부 설정  
+<img width="253" alt="appendix A" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/c7875276-b78e-4e15-8cb8-f2d968430b4d">
+  
+B. PYLD-M-N 알고리즘
+PYLD-M-N으로 생성된 샘플은 그림4와 같다. Image-level EBM은 디테일한 텍스쳐는 뭉개지지만 이미지의 전체적인 외형을 재구성(reconstruct)한 샘플이 생성 됨을 확인할 수 있었다. 반면에 Patch-level EBM은 이미지의 전체적인 외형보다 텍스쳐를 위주로 샘플이 생성됨을 확인할 수 있다.  
+<img width="523" alt="appendix B" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/7a90daa3-c03c-4110-9084-7bb444b2be00">
+  
+C. Grad-CAM 시각화 결과
+모델이 중점적으로 집중하고 있는 부분을 확인하기 위하여 Grad-CAM[18]을 통하여 시각화를 진행하였다. Image-level EBM의 경우 전체적인 외형에 모델이 집중하는 반면에
+patch-level EBM의 경우 이미지의 텍스쳐에 대한 변화(그림5에서 페인트 부분)에 더욱 집중하는 것을 확인할 수 있었다.  
+<img width="495" alt="appendix C" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/87ce08cd-0cf2-4d02-87b0-0f9e418ac3e5">
+  
+D. 카테고리별 이상 감지 분류 그래프
+본 모델에서는 에너지 CNN을 통과하였을 때 도출된 단일 값(scalar)으로 이상 감지를 실시한다. 따라서 일정한 임계치를 설정하여 정상, 비정상을 판단하게 된다. 15개 카테고리에 대한 이상 점수와 임계치를 시각화한 히스토그램 그래프는 표7과 같다.
+<img width="488" alt="appendix D" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/283f93a3-b07e-4baf-ab5f-0804e8e3d463">
