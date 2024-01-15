@@ -61,4 +61,4 @@ D. 카테고리별 이상 감지 분류 그래프
   
 본 모델에서는 에너지 CNN을 통과하였을 때 도출된 단일 값(scalar)으로 이상 감지를 실시한다. 따라서 일정한 임계치를 설정하여 정상, 비정상을 판단하게 된다. 15개 카테고리에 대한 이상 점수와 임계치를 시각화한 히스토그램 그래프는 표7과 같다.
   
-<img width="488" alt="appendix D" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/b24a271c-0792-470e-9102-d0ef58597eca">
+<img width="488" alt="appendix D" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/e51714b8-bf86-4781-9091-c0d0cdfb4ecf">
