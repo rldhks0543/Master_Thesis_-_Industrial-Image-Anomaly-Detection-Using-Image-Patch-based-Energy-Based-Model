@@ -5,7 +5,7 @@
 
 # 모델의 구조
 
-본 연구에서는 **1. 이미지 패치 기반 에너지 모델(Image Patch-level EBM)**과 **2. 이미지 전체 기반 에너지 모델(Image-level EBM)**을 **3. 앙상블한 모델**을 제시한다.
+본 연구에서는 **1. 이미지 패치 기반 에너지 모델(Image Patch-level EBM)** 과 **2. 이미지 전체 기반 에너지 모델(Image-level EBM)** 을 **3. 앙상블한 모델** 을 제시한다.
 
 ### 1. 이미지 패치 기반 에너지 모델(Image Patch-level EBM)의 구조
 
