@@ -62,3 +62,57 @@ D. 카테고리별 이상 감지 분류 그래프
 본 모델에서는 에너지 CNN을 통과하였을 때 도출된 단일 값(scalar)으로 이상 감지를 실시한다. 따라서 일정한 임계치를 설정하여 정상, 비정상을 판단하게 된다. 15개 카테고리에 대한 이상 점수와 임계치를 시각화한 히스토그램 그래프는 표7과 같다.
   
 <img width="488" alt="appendix D" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/e51714b8-bf86-4781-9091-c0d0cdfb4ecf">
+
+***
+## Abstract
+  
+1. Samet Akcay, Amir Atapour-Abarghouei, and Toby P. Breckon. "Ganomaly: Semi-supervised anomaly detection via adversarial training." in ACCV, vol. 3, no. 14, pp. 622-637,   2018.
+
+2. Samet Akcay, Amir Atapour-Abarghouei, and Toby P. Breckon. "Skip-ganomaly: Skip connected and adversarially trained encoder-decoder anomaly detection." in IEEE/IJCNN, pp. 1-8, 2019.
+
+3. Paul Bergmann, et al. “Mvtec ad–acomprehensive real-world dataset for unsupervised anomaly detection.” in IEEE /CVF CVPR, pp. 9592-9600,  2019.
+
+4. Niv Cohen, Yedid Hoshen. "Sub-image anomaly detection with deep pyramid correspondences." in arXiv preprint arXiv, 2020.
+
+5. Thomas Defard, et al. "Padim: a patch distribution modeling framework for anomaly detection and localization." in ICPR, vol. 12664, pp. 475-489, 2021.
+
+6. Yilun Du and Igor Mordatch. "Implicit generation and generalization in energy-based models." in NeurIPS, 2019.
+
+7. Ergin Utku Genc, et al. " Energy-based anomaly detection and localization." in Energy Based Models Workshop - ICLR, 2021.
+
+8. Ian Goodfellow, et al. "Generative adversarial nets." in NeurIPS, vol. 27, 2014.
+
+9. Will Grathwohl, et al. "Your classifier is secretly an energy based model and you should treat it like one." in ICLR, 2020.
+
+10. Geoffrey E Hinton. "Training products of experts by minimizing contrastive divergence." in Neural computation, 2002.
+
+11. Diederik Kingma and Jimmy Ba.  "Adam: A method for stochastic optimization." in ICLR, 2015.
+
+12. Diederik Kingma and Max Welling. "Auto-encoding variational bayes."  in ICLR, 2014.
+
+13. Yann LeCun, et al. "A tutorial on energy-based learning." in Predicting structured data, 2006.
+
+14. Erik Nijkamp, Song-Chun Zhu, and Ying Nian Wu. "Learning non-convergent non-persistent short-run MCMC toward Energy-based model." in NeurIPS, vol. 32,   2019.
+
+15. Oliver Rippel, Patrick Mertens, and Dorit Merhof. "Modeling the distribution of normal data in pre-trained deep features for anomaly detection." in IEEE/CVF CVPR, pp.6726-6733, 2021.
+
+16. Karsten Roth, et al. "Towards total recall in industrial anomaly detection." in IEEE/CVF CVPR, pp.14318-14328, 2022.
+
+17. Thomas Schlegl, et al. "Unsupervised anomaly detection with generative adversarial networks to guide marker discovery." in IPMI, pp.146-157, 2017.
+
+18. Ramprasaath R Selvaraju, et al. "Grad-cam: Visual explanations from deep networks via gradient-based localization." in  IEEE/ICCV, pp. 618-626, 2017.
+
+19. Kihyuk Sohn, et al. "Self-Supervised Learning for Anomaly Detection and Localization." in U.S. Patent Application, vol. 17,  2022.
+
+20. Yang Song and Diederik P. Kingma. "How to train your energy-based models." in arXiv preprint arXiv, 2021.
+
+21. Ta-wei Tang, et al. "Anomaly detection neural network with dual auto-encoders GAN and its industrial inspection applications." in Sensors, vol. 20, no.12, pp.3336, 2020.
+22. Max Welling and Yee W Teh. "Bayesian learning via stochastic gradient langevin dynamics." in ICML, pp. 681-688, 2011.
+
+23. Xiulong Yang and Shihao Ji. "Jem++: Improved techniques for training jem." in IEEE/CVF ICCV, pp. 6494-6503, 2021.
+
+24. Sergey Zagoruyko and Nikos Komodakis. "Wide residual networks." in BMVC, 2016.
+
+25. Dinghuai Zhang, et al. "You only propagate once: Accelerating adversarial training via maximal principle." in NeurIPS, vol. 32, 2019.
+
+26. Jun-Yan Zhu, et al. "Unpaired image-to-image translation using cycle-consistent adversarial networks." in IEEE/ICCV, pp.2223-2232, 2017.
