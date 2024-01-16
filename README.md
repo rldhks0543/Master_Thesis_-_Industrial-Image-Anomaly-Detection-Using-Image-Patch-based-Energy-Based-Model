@@ -46,16 +46,19 @@
   
 <img width="253" alt="appendix A" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/c7875276-b78e-4e15-8cb8-f2d968430b4d">
   
+  
 **B. PYLD-M-N 알고리즘**  
   
 PYLD-M-N으로 생성된 샘플은 그림4와 같다. Image-level EBM은 디테일한 텍스쳐는 뭉개지지만 이미지의 전체적인 외형을 재구성(reconstruct)한 샘플이 생성 됨을 확인할 수 있었다. 반면에 Patch-level EBM은 이미지의 전체적인 외형보다 텍스쳐를 위주로 샘플이 생성됨을 확인할 수 있다.  
 <img width="523" alt="appendix B" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/7a90daa3-c03c-4110-9084-7bb444b2be00">
+  
   
 **C. Grad-CAM 시각화 결과**  
   
 모델이 중점적으로 집중하고 있는 부분을 확인하기 위하여 Grad-CAM[18]을 통하여 시각화를 진행하였다. Image-level EBM의 경우 전체적인 외형에 모델이 집중하는 반면에
 patch-level EBM의 경우 이미지의 텍스쳐에 대한 변화(그림5에서 페인트 부분)에 더욱 집중하는 것을 확인할 수 있었다.  
 <img width="495" alt="appendix C" src="https://github.com/rldhks0543/Patch-based_EBM/assets/114603826/87ce08cd-0cf2-4d02-87b0-0f9e418ac3e5">
+  
   
 **D. 카테고리별 이상 감지 분류 그래프**  
   
